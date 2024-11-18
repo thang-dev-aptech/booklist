@@ -13,26 +13,27 @@ const addBook = () => {
         }
     }
     if(!checkId){
+        const book = document.getElementById('bookList');
         const addBook = document.createElement('div');
         let obj = {id, title, author, price};
         addBook.className = 'book';
-        addBook.style.marginTop='10px';
-        addBook.style.textAlign = 'left';
-        addBook.style.marginBottom = '10px';
-        addBook.style.padding = '7px';
-        addBook.style.borderBottom = '1px solid #ccc';    
-        addBook.style.fontSize = '17px';
-        addBook.style.fontWeight= 'normal';
-        addBook.innerHTML = 
-        `ID: <strong>${id}</strong> - Title: ${title} - Author: ${author}, Price: ${price}`
-        const book = document.getElementById('bookList');
-        book.appendChild(addBook);
         
+        addBook.innerHTML = 
+        `ID: <strong>${id}</strong> - Title: ${title} - Author: ${author}, Price: ${price}`;
+        const actionButton = document.createElement('div');
+        actionButton.className = 'action';
+        const editBook = document.createElement('button');
+        editBook.className = 'editBook';
+        editBook.innerHTML = 'Edit';
+        
+        actionButton.appendChild(addBook);
+        actionButton.appendChild(editBook);
+        book.appendChild(actionButton);
         ds.push({id, title, author, price});
     }
     document.getElementById('id').value = "";
-    document.getElementById('title').value = "";
-    document.getElementById('author').value = "";
-    document.getElementById('price').value = "";
+    document.getElementById('title').value ="";
+    document.getElementById('author').value ="";
+    document.getElementById('price').value ="";
     
 }
