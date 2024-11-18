@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('../images/bg.jpg');
+    font-family: "Times";
+}
+.container{
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.frame{
+    width: 400px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    margin: 7px;
+}
+.login label{
+    display: block;
+    width: 30%;
+    font-size: 20px;
+    text-align: right;
+    padding: 5px;
+    font-weight: bold;
+}
+.login input{
+    width: 70%;
+    padding: 5px;
+}
+.submit{
+    display: flex;
+    justify-content: right;
+    margin: 5px;
+}
+button{
+    padding: 7px 15px;
+    background-color: #ebe6e6;
+    color: black;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+

@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+.container{
+    width: 1180px;
+    margin: 0 auto;
+    text-align: center ;
+    display: flex;
+    justify-content: center;
+}
+.frame{
+    min-width: 500px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    height: auto;
+}
+.frame .heading{
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.line label{
+    display: block;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+.line input{
+    width: 90%;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid rgb(93, 91, 91);
+    margin: 0 auto;
+    margin-bottom: 6px;
+}
+button{
+    display: block;
+    width: 93%;
+    margin: 0 auto;
+    padding: 7px;
+    background-color: #42c55a;
+    border-radius: 8px;
+    margin-top: 17px;
+    font-size: 17px;
+    font-weight: 550;
+    border: 1px solid #433d3d;
+}
+.bookList{
+    text-align: left;
+    width: 93%;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+#display{
+    font-weight: normal;
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+ 
