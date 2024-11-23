@@ -31,9 +31,36 @@ function displayBooks(){
         const deleteButton = document.createElement("button");
         deleteButton.className = "delete";
         deleteButton.textContent = "Delete";
-        deleteButton.onclick = () =>{
-            const index = ds.findIndex((b) => b.id === book.id);
-            if(index!== -1){
+        editButton.onclick = () => {
+            const update = document.getElementById('add');
+            update.innerText = "Update Book";
+            document.getElementById("id").value = book.id;
+            document.getElementById("title").value = book.title;
+            document.getElementById("author").value = book.author;
+            document.getElementById("price").value = book.price;
+
+            update.onclick = () => {
+                const id = document.getElementById("id").value;
+                const title = document.getElementById("title").value;
+                const author = document.getElementById("author").value;
+                const price = document.getElementById("price").value;
+
+                const index = ds.indexOf(book);
+                console.log(index);
+                if(index > -1){
+                    ds[index].title = title;
+                    ds[index].author = author;
+                    ds[index].price = price;
+                    displayBooks();
+                    clearForm();
+                }
+
+            }
+            
+        }
+        deleteButton.onclick = () => {
+            const index = ds.indexOf(book);
+            if(index > -1){
                 ds.splice(index, 1);
             }
             displayBooks();
@@ -57,3 +84,4 @@ function clearForm(){
     document.getElementById("price").value = "";
     document.getElementById("error").textContent = "";
 }
+
