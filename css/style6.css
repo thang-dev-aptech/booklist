@@ -5,6 +5,9 @@
 body{
     font-family: Arial, sans-serif;
 }
+button{
+    cursor: pointer;
+}
 .container{
     width: 500px;
     margin: 0 auto;
@@ -50,29 +53,40 @@ input[type = "text"] {
     margin-bottom: 25px;
     
 }
-.actionContainer{
+.container_action{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     margin: 5px;
 }
-.newBook{
+.book{
     text-align: left;
     font-weight: normal;
     font-size: 15px;
 
 }
-.delete,
-.edit{
+.Delete,
+.Edit{
     background-color: rgb(81, 219, 81);
     padding: 5px 22px;
     border-radius: 5px;
     border: 1px solid #433d3d;
 }
-.delete{
+.Delete{
     background-color: red;
 }
 h3{
     text-align: center;
 }
 
+.search{
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+.searchBtn{
+    width: 100%;
+    background-color: #5cd272;
+    border-radius: 5px;
+    border: 1px solid #433d3d;
+}
